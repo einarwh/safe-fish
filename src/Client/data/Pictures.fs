@@ -41,3 +41,19 @@ let beside = besideRatio 1 1
 let quartet nw ne sw se = 
   (above (beside nw ne)
          (beside sw se))
+
+let rec row = function
+  | [] -> blank
+  | [p] -> p
+  | p::ps -> besideRatio 1 (List.length ps) p (row ps)
+
+let rec column = function
+  | [] -> blank
+  | [p] -> p
+  | p::ps -> aboveRatio 1 (List.length ps) p (column ps)
+
+let nonet nw nm ne mw mm me sw sm se =
+  [ [nw;nm;ne]; [mw;mm;me]; [sw;sm;se] ]
+  |> List.map row
+  |> column
+  
