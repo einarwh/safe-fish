@@ -56,4 +56,7 @@ let nonet nw nm ne mw mm me sw sm se =
   [ [nw;nm;ne]; [mw;mm;me]; [sw;sm;se] ]
   |> List.map row
   |> column
-  
+
+let over p1 p2 = 
+  fun box -> 
+    p1 box @ p2 box
