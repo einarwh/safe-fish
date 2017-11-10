@@ -11,3 +11,5 @@ type Picture = Box -> Rendering
 let blank : Picture = fun _ -> []
 
 let turn p = turnBox >> p
+
+let flip p = flipBox >> p
