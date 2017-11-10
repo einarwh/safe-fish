@@ -19,3 +19,6 @@ let rec times n fn =
 let turns n = times n turn
 
 let flip p = flipBox >> p
+
+let toss p = tossBox >> p
+

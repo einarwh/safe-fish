@@ -21,6 +21,6 @@ let transform { letter = letter; figure = figure }
   let box = { a = { x = 75.; y = 50. }
               b = { x = 150.; y = 0. }
               c = { x = 0.; y = 150. } }
-  let shapes' = box |> figure
-  (bounds, [ box ], shapes')
+  let shapes = box |> (toss figure)
+  (bounds, [ box; tossBox box ], shapes)
   
