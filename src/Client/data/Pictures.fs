@@ -29,3 +29,11 @@ let aboveRatio m n (p1 : Picture) (p2 : Picture) =
     p1 b1 @ p2 b2
 
 let above = aboveRatio 1 1
+
+let besideRatio m n (p1 : Picture) (p2 : Picture) = 
+  fun box ->
+    let factor = (float m) / (float (m + n))
+    let b1, b2 = splitHorizontally factor box
+    p1 b1 @ p2 b2
+
+let beside = besideRatio 1 1
