@@ -8,8 +8,6 @@ type Picture = Lens -> (Shape * Style) list
 
 let blank : Picture = fun _ -> []
 
-(*
-
 let turn (p : Picture) = turnLens >> p 
 
 let flip (p : Picture) = flipLens >> p 
@@ -121,4 +119,3 @@ let squareLimit n fish =
         sideW center sideE
         cornerSW sideS cornerSE
         
-*)
