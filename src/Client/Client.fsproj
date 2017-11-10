@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Pages.fs" />
+    <Compile Include="Style.fs" />
+    <Compile Include="data/Vectors.fs" />
+    <Compile Include="data/Shapes.fs" />
+    <Compile Include="data/Styling.fs" />
+    <Compile Include="data/Letters.fs" />
+    <Compile Include="data/Figures.fs" />
+    <Compile Include="data/Fishy.fs" />
+    <Compile Include="data/Fishier.fs" />
+    <Compile Include="data/Boxes.fs" />
+    <Compile Include="data/Pictures.fs" />
+    <Compile Include="data/Lenses.fs" />
+    <Compile Include="data/Shades.fs" />
+    <Compile Include="rendering/Transforms.fs" />
+    <Compile Include="rendering/Reform.fs" />
+    <Compile Include="pages/Menu.fs" />
+    <Compile Include="pages/Start.fs" />
+    <Compile Include="pages/Turn.fs" />
+    <Compile Include="pages/Flip.fs" />
+    <Compile Include="pages/Toss.fs" />
+    <Compile Include="pages/Above.fs" />
+    <Compile Include="pages/Beside.fs" />
+    <Compile Include="pages/Quartet.fs" />
+    <Compile Include="pages/Nonet.fs" />
+    <Compile Include="pages/Over.fs" />
+    <Compile Include="pages/Ttile.fs" />
+    <Compile Include="pages/Utile.fs" />
+    <Compile Include="pages/Side.fs" />
+    <Compile Include="pages/Corner.fs" />
+    <Compile Include="pages/Limit.fs" />
+    <Compile Include="pages/Hue.fs" />
+    <Compile Include="pages/Xttile.fs" />
+    <Compile Include="pages/Xutile.fs" />
+    <Compile Include="pages/Xside.fs" />
+    <Compile Include="pages/Xcorner.fs" />
+    <Compile Include="pages/Xlimit.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

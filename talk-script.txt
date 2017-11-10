@@ -1,0 +1,97 @@
+Script
+
+Pict is reset.
+
+Clean:
+ - Boxes
+ - Pictures
+ - Lenses
+ - Shades
+
+Compile, run, check all slides work.
+
+#intro 00 - 02
+
+#pict 02 - 04
+
+  Change box twice
+
+#turn 04 - 06
+
+  turn
+  turnBox
+
+#flip 06 - 08
+
+  flip 
+  flipBox
+
+#toss 08 - 10
+
+  toss
+  tossBox
+
+#above 10 - 12
+
+  above
+  aboveRatio
+  splitVertically
+  moveVertically
+  scaleVertically
+
+#beside 12 - 14
+
+  beside
+  besideRatio
+  splitHorizontally
+  moveHorizontally
+  scaleHorizontally
+
+#quartet 14 - 16
+
+  quartet
+
+#nonet 16 - 18
+
+  row
+  column
+  nonet
+
+#over 18 - 20
+
+  over
+
+#ttile 20 - 22
+
+  ttile
+
+#utile 22 - 24
+
+  utile
+
+#side 24 - 26
+
+  side 1
+  side n
+
+#corner 26 - 28
+
+  corner 1
+  corner n
+
+#limit 28 - 30
+
+  squareLimit n
+
+#hue 30 - 32
+
+#xttile 32 - 34
+
+#xutile 34 - 36
+
+#xside 36 - 38
+
+#xcorner 38 - 40 
+
+#xlimit 40 - 42
+

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Shared/Domain.fs" />
+    <Compile Include="Shared/ServerUrls.fs" />
+    <Compile Include="ServerTypes.fs" />
+    <Compile Include="FableJson.fs" />
+    <Compile Include="WebServer.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
