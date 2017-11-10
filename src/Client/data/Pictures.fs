@@ -74,3 +74,8 @@ let utile fish =
   over (over fishN fishS) 
        (over fishE fishW)
 
+let rec side n fish = 
+  let s = if n = 1 then blank else side (n - 1) fish
+  let t = ttile fish
+  quartet s s (turn t) t
+
