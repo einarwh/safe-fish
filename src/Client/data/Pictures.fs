@@ -79,3 +79,6 @@ let rec side n fish =
   let t = ttile fish
   quartet s s (turn t) t
 
+let rec corner n fish = 
+  let c, s = if n = 1 then blank, blank else corner (n - 1) fish, side (n - 1) fish
+  quartet c s (turn s) (utile fish)
