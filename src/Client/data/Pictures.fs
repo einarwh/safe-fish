@@ -65,3 +65,12 @@ let ttile fish =
   let fishN = fish |> toss |> flip
   let fishE = fishN |> turns 3
   over fish (over fishN fishE)
+
+let utile fish = 
+  let fishN = fish |> toss |> flip
+  let fishW = turn fishN
+  let fishS = turn fishW
+  let fishE = turn fishS
+  over (over fishN fishS) 
+       (over fishE fishW)
+
