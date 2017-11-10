@@ -60,3 +60,8 @@ let nonet nw nm ne mw mm me sw sm se =
 let over p1 p2 = 
   fun box -> 
     p1 box @ p2 box
+
+let ttile fish = 
+  let fishN = fish |> toss |> flip
+  let fishE = fishN |> turns 3
+  over fish (over fishN fishE)

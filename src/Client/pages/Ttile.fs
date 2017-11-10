@@ -14,7 +14,9 @@ let init() : Model =
 let transform (p : Model) : Transforms.Model =
   let bounds = (400, 400)
   let box = { a = { x = 75.; y = 75. }
-              b = { x = 250.; y = 0. }
-              c = { x = 0.; y = 250. } }
-  let shapes1 = box |> p
-  (bounds, [], shapes1)
+              b = { x = 200.; y = 0. }
+              c = { x = 0.; y = 200. } }
+  let shapes = box |> (ttile p)
+  let bn = box |> flipBox |> tossBox
+  let be = box |> times 3 turnBox |> flipBox |> tossBox 
+  (bounds, [ box; bn; be ], shapes)
