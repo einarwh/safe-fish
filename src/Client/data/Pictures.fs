@@ -37,3 +37,7 @@ let besideRatio m n (p1 : Picture) (p2 : Picture) =
     p1 b1 @ p2 b2
 
 let beside = besideRatio 1 1
+
+let quartet nw ne sw se = 
+  (above (beside nw ne)
+         (beside sw se))
