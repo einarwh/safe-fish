@@ -12,9 +12,9 @@ let init() : Model =
   createPicture hendersonFishShapes 
 
 let transform (p : Model) : Transforms.Model =
-  let bounds = (440, 440)
-  let box = { a = { x = 30.; y = 40. }
-              b = { x = 380.; y = 0. }
-              c = { x = 0.; y = 380. } }
-  let shapes = box |> blank
-  (bounds, [], shapes)
+  let bounds = (450, 450)
+  let box = { a = { x = 10.; y = 10. }
+              b = { x = 430.; y = 0. }
+              c = { x = 0.; y = 430. } }
+  let shapes' = box |> squareLimit 3 p
+  (bounds, [], shapes')

@@ -82,3 +82,17 @@ let rec side n fish =
 let rec corner n fish = 
   let c, s = if n = 1 then blank, blank else corner (n - 1) fish, side (n - 1) fish
   quartet c s (turn s) (utile fish)
+
+let squareLimit n fish = 
+  let c = corner n fish
+  let s = side n fish
+  let nw = c
+  let nm = s
+  let ne = c |> turns 3
+  let mw = s |> turn
+  let mm = utile fish
+  let me = s |> turns 3
+  let sw = c |> turn
+  let sm = s |> turns 2
+  let se = c |> turns 2
+  nonet nw nm ne mw mm me sw sm se
