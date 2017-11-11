@@ -5,7 +5,6 @@ open Data.Letters
 open Data.Boxes
 open Data.Pictures
 open Transforms
-open System.Security.Authentication.ExtendedProtection
 
 type Model = Picture * Picture
 
