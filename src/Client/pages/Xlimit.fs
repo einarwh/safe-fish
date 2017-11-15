@@ -19,5 +19,5 @@ let transform p : Reform.Model =
               b = { x = 400.; y = 0. }
               c = { x = 0.; y = 400. } }   
   let lens = (box, Greyish)           
-  let shapes = lens |> blank
+  let shapes = lens |> squareLimit 3 p 
   (bounds, White, shapes)

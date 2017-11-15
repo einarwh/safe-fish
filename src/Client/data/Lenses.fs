@@ -6,7 +6,6 @@ type Hue = Blackish | Greyish | Whiteish
 
 type Lens = Box * Hue
 
-(*
 let turnLens (box, hue : Hue) = (turnBox box, hue)
 
 let flipLens (box, hue : Hue) = (flipBox box, hue)
@@ -39,4 +38,3 @@ let rehueLens (box : Box, hue : Hue) =
   | Greyish -> Whiteish
   | Blackish -> Greyish
   (box, change hue)
-  *)

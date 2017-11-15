@@ -16,5 +16,5 @@ let transform (p : Model) : Transforms.Model =
   let box = { a = { x = 50.; y = 50. }
               b = { x = 300.; y = 0. }
               c = { x = 0.; y = 300. } }
-  let shapes = box |> blank
+  let shapes = box |> side 3 p 
   (bounds, [], shapes)

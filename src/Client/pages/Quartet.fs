@@ -6,6 +6,7 @@ open Data.Figures
 open Data.Boxes
 open Data.Pictures
 open Transforms
+open Fable.Helpers.React
 
 type Model = 
   { letter : Picture
@@ -21,7 +22,14 @@ let transform { letter = letter; figure = figure } : Transforms.Model =
               b = { x = 300.; y = 0. }
              
               c = { x = 0.; y = 300. } }
-  
-  let shapes = box |> figure
+  let p = letter
+  let nw = p 
+  let ne = p |> turns 2 |> flip
+  let sw = p |> turns 2 
+  let se = p |> flip
+  let q = quartet nw ne sw se 
+  let qq = quartet q blank blank q 
+  let quartet1 p = quartet p p p p 
+  let shapes = box |> times 3 quartet1 qq
   (bounds, [], shapes)
   

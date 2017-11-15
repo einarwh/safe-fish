@@ -21,5 +21,8 @@ let transform { letter = letter; figure = figure }
   let box = { a = { x = 50.; y = 50. }
               b = { x = 200.; y = 0. }
               c = { x = 0.; y = 200. } }
-  let shapes = box |> letter
-  (bounds, [ box ], shapes)
+  // let double n = n + n
+  // double 10 
+  // 10 |> double 
+  let shapes = box |> turns 4 letter
+  (bounds, [ times 4 turnBox box ], shapes)

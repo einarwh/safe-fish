@@ -16,5 +16,5 @@ let transform (p : Model) : Transforms.Model =
   let box = { a = { x = 30.; y = 40. }
               b = { x = 380.; y = 0. }
               c = { x = 0.; y = 380. } }
-  let shapes = box |> blank
+  let shapes = box |> squareLimit 3 p 
   (bounds, [], shapes)
