@@ -35,7 +35,7 @@ let size { x = x; y = y } =
   sqrt(x * x + y * y)
 
 let getStrokeWidth { a = _; b = b; c = c } =
-  let s = min (size b) (size c)
+  let s = max (size b) (size c)
   s / 80.
                          
 let getStyle box = 
@@ -106,8 +106,8 @@ let mirrorShape mirror = function
 
 
 let getStrokeWidthFromStyle = function 
-  | Some strokeStyle ->
-    1.
+  | Some { strokeWidth = sw; strokeColor = _ } -> 
+    sqrt sw    
   | None -> 1.
 
 let toSvgElement (style : Style) = function 
@@ -124,18 +124,22 @@ let toSvgElement (style : Style) = function
     | Polygon { points = pts } ->
       let pt { x = x; y = y } = sprintf "%f,%f" x y
       let s = pts |> List.map pt |> List.fold (fun acc it -> if acc = "" then it else acc + " " + it) ""
+      let strokeWidth = 1.5 * getStrokeWidthFromStyle style.stroke
       let polygonElement = 
         polygon 
           [ SVGAttr.Stroke "black"
+            SVGAttr.StrokeWidth strokeWidth
             SVGAttr.Fill "none"
             Points s ] []
       polygonElement
     | Polyline { pts = pts } ->
       let pt { x = x; y = y } = sprintf "%f,%f" x y
       let s = pts |> List.map pt |> List.fold (fun acc it -> if acc = "" then it else acc + " " + it) ""
+      let strokeWidth = 1.5 * getStrokeWidthFromStyle style.stroke
       let polylineElement = 
         polyline 
           [ SVGAttr.Stroke "black"
+            SVGAttr.StrokeWidth strokeWidth
             SVGAttr.Fill "none"
             Points s ] []
       polylineElement
