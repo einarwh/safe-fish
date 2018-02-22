@@ -6,7 +6,6 @@ open Data.Figures
 open Data.Boxes
 open Data.Pictures
 open Transforms
-open Fable.Helpers.React
 
 type Model = 
   { letter : Picture
