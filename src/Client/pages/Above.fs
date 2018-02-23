@@ -18,5 +18,7 @@ let transform ((pf, pn) : Model) : Transforms.Model =
   let box = { a = { x = 50.; y = 50. }
               b = { x = 200.; y = 0. }
               c = { x = 0.; y = 200. } }
-  let shapes = box |> pf
+  let shapes = box |> (above pf (above (turn pf) (turns 2 pf)) |> turn) 
+  let b1, b2 = splitVertically 0.5 box 
+  let b3, b4 = splitVertically 0.5 b2
   (bounds, [ box ], shapes)

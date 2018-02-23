@@ -40,5 +40,7 @@ let transform { nw = nw; nm = nm; ne = ne;
   let box = { a = { x = 40.; y = 60. }
               b = { x = 320.; y = 0. }
               c = { x = 0.; y = 320. } }
-  let shapes' = box |> blank
-  (bounds, [], shapes')
+  let n = nonet nw nm ne mw mm me sw sm se
+  let zoom p = nonet nw nm ne mw p me sw sm se
+  let shapes = box |> (n |> times 3 zoom) 
+  (bounds, [], shapes)

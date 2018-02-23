@@ -17,8 +17,8 @@ let init() : Model =
 
 let transform { letter = letter; figure = figure } : Transforms.Model = 
   let bounds = (300, 300)
-  let box = { a = { x = 50.; y = 50. }
-              b = { x = 200.; y = 0. }
-              c = { x = 0.; y = 200. } }
-  let shapes' = box |> letter
-  (bounds, [ box ], shapes')
+  let box = { a = { x = 80.; y = 50. }
+              b = { x = 100.; y = 20. }
+              c = { x = 20.; y = 150. } }
+  let shapes = box |> figure
+  (bounds, [ box ], shapes)
